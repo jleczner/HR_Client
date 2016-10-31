@@ -8,6 +8,7 @@ function clock() {
       h = checkTime(today.getHours()),
       m = checkTime(today.getMinutes()),
       s = checkTime(today.getSeconds());
+    if (h > 12) { h -= 12; }
     document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
     t = setTimeout(function () {
       startTime()
